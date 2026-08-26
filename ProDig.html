@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Real o IA?</title>
+
+    <link rel="stylesheet" href="ProDig.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Sonidos -->
+<audio id="audiodeFondo" src="Audio/fondo.mpeg"></audio>
+<audio id="audioCorrecto" src="Audio/siii.mpeg"></audio>
+<audio id="audioError" src="Audio/nooo.mpeg"></audio>
+
+<!-- Confeti -->
+<canvas id="confeti"></canvas>
+
+<body>
+
+<!-- Fondo -->
+<div class="fondo"></div>
+
+<!-- Pantalla de inicio -->
+<section id="inicio" class="pantalla">
+
+    <h1>¿REAL O IA?</h1>
+
+    <p>
+        ¿Podrás distinguir una fotografía real de una imagen creada con Inteligencia Artificial?
+    </p>
+
+    <button onclick="iniciarJuego()">
+        Jugar
+    </button>
+
+</section>
+
+<!-- Pantalla del juego -->
+<section id="juego" class="pantalla oculto">
+
+<div class="barraSuperior">
+
+<div id="pregunta">
+Pregunta 1 / 10
+</div>
+
+<div id="puntos">
+⭐ 0
+</div>
+
+<div id="tiempo">
+⏱️ 10
+</div>
+
+</div>
+
+<div class="barra">
+
+<div id="progreso"></div>
+
+</div>
+
+<h2>
+¿Cuál imagen es REAL?
+</h2>
+
+<div class="contenedorImagenes">
+
+<div class="tarjeta">
+
+<img id="imagen1">
+
+</div>
+
+<div class="tarjeta">
+
+<img id="imagen2">
+
+</div>
+
+</div>
+
+<div id="mensaje"></div>
+
+<button id="btnSiguiente" onclick="siguientePregunta()">
+
+Siguiente ➜
+
+</button>
+
+</section>
+
+<!-- Pantalla Final -->
+
+<section id="final" class="pantalla oculto">
+
+<h1>
+Resultado Final
+</h1>
+
+<h2 id="resultado"></h2>
+
+<p id="medalla"></p>
+
+<button onclick="location.reload()">
+
+Volver a jugar
+
+</button>
+
+</section>
+
+<script src="ProDig.js"></script>
+
+</body>
+</html>
